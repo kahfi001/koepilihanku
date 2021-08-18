@@ -1,0 +1,638 @@
+body {
+  font: roboto;
+}
+/* Navbar */
+.flex-nav {
+  background-color: #c49b63;
+}
+
+.search-btn {
+  background-color: #c49b63;
+  color: #fff;
+}
+
+.navbar .active {
+  font-weight: bold;
+}
+
+.search-btn:hover {
+  background-color: #9b743f;
+  color: #fff;
+}
+
+.icon-navbar {
+  color: #000000;
+}
+.icon-navbar:hover {
+  color: #d8c6ae;
+}
+
+/* Banner */
+.carousel .banner-promo {
+  height: 650px;
+}
+
+.banner-promo img {
+  top: 0;
+  object-fit: cover;
+  left: 0;
+  background-size: cover;
+}
+
+/* Services */
+
+.services {
+  margin-top: 40px;
+  align-items: center;
+}
+
+.shipping {
+  background-color: #d6b78a;
+  height: 80px;
+  width: 80px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.shipping:hover {
+  background-color: #c49b63;
+}
+
+/* ?kategori */
+
+.kategori {
+  padding: 100px 0;
+}
+
+.item {
+  height: 150px;
+  width: 250px;
+}
+
+.k1 {
+  background: url(../asssets/img/biji-kopi.jpg);
+}
+.k2 {
+  background: url(../asssets/img/bubuk-kopi.jpg);
+}
+.k3 {
+  background: url(../asssets/img/mesin-kopi.jpg);
+}
+
+.txt {
+  background-color: #c49b63;
+  padding: 10px;
+}
+
+.kategori h2 {
+  letter-spacing: 5px;
+}
+
+.kategori-list {
+  margin-bottom: 20px;
+}
+
+/* produk */
+.produk {
+  margin-top: 20px;
+  padding: 0 0 100px 0;
+}
+
+.produk h2 {
+  letter-spacing: 5px;
+}
+
+.produk a {
+  text-decoration: none;
+  color: #000;
+}
+
+.col-produk {
+  margin-bottom: 20px;
+}
+
+.produk-item {
+  background-color: white;
+  width: 255px;
+  height: 300px;
+  padding: 20px;
+  border: 2px solid #eaeaea;
+}
+
+.produk-item img {
+  height: 200px;
+}
+
+.produk-item h5 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.produk-item .text {
+  position: relative;
+}
+
+.produk-item:hover .bottom-area {
+  transform: scaleY(1);
+  transition: transform 0.5s;
+}
+
+.produk-item:hover .text h5 h6 {
+  transform: scaleY(0);
+
+  transition: transform 0.1s;
+}
+
+.bottom-area {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  display: inline-block;
+  overflow: hidden;
+  padding: 15px 20px;
+  transform: scaleY(0);
+  transition: transform 0.5;
+  display: none;
+}
+
+.bottom-area .option {
+  position: absolute;
+}
+
+.produk .produk-item .text img {
+  height: 20px;
+}
+
+.produk .produk-item .text .op-item {
+  background-color: #c49b63;
+  height: 40px;
+  width: 40px;
+  padding-top: 15%;
+}
+
+.produk .produk-item .text .op-item:hover {
+  background-color: #9b743f;
+  height: 40px;
+  width: 40px;
+  padding-top: 15%;
+}
+
+/* ***************************** Modal ***************************************** */
+
+.modal-cart {
+  overflow-y: scroll;
+  max-height: 500px;
+}
+
+.modal-cart img {
+  height: 100px;
+}
+
+.modal-cart .txt-modal {
+  text-align: center;
+}
+
+.col-modal-img {
+  margin: 0;
+}
+
+.btn-beli {
+  background-color: #c49b63;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.btn-beli:hover {
+  background-color: #9b743f;
+  color: white;
+  transition: 0.7s;
+}
+
+.total-harga {
+  padding: 20px;
+}
+
+.modal-cart input {
+  width: 50px !important;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 5px !important;
+}
+
+.modal-cart .box {
+  margin-bottom: 10px;
+}
+
+.modal-cart .box button {
+  background-color: #c49b63;
+  color: white;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.modal-cart .box button:hover {
+  background-color: #c49b63;
+}
+
+/* footer */
+.menu-footer,
+.question {
+  display: none;
+}
+
+/* ***************************** bagian Product.html *************************** */
+.banner {
+  width: 100%;
+  height: 490px;
+  background: url(../asssets/img/banner-mobile.jpg);
+  background-size: cover;
+}
+
+.banner h1 {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 20px;
+}
+
+.txt-banner {
+  height: 100%;
+  padding: 50% 0;
+}
+
+/* Filter */
+.filter {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.filter-row {
+  height: 55px !important;
+}
+
+.filter-row p {
+  letter-spacing: 3px;
+}
+
+.filter-row .col-md-2 {
+  cursor: pointer;
+}
+
+.content-produk {
+  margin-top: 100px;
+}
+
+/* **************** Bagian About US ************************* */
+
+.content-img {
+  height: 385px;
+  width: 275px;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.content-text {
+  padding: 40px;
+}
+
+/* ********************* Bagian Whistlist.html ************************ */
+.content-whistlist {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
+
+.table-whistlist {
+  background-color: #c49b63;
+  color: white;
+  outline: none;
+}
+
+/* ***************************** Product Details *************************** */
+
+.details {
+  padding: 80px;
+}
+
+.picture .container {
+  padding: 20px;
+}
+
+.detail-text h1 {
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.detail-text h2 {
+  margin: 30px;
+  font-size: 40px;
+  color: #c49b63;
+}
+
+.detail-text p {
+  margin: 30px;
+  margin-bottom: 50px;
+  font-size: 17px;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.btn-add {
+  background-color: #c49b63;
+  color: white;
+  width: 100%;
+}
+
+.availability {
+  border-top: 1px solid rgba(128, 128, 128, 0.712);
+  margin-top: 50px;
+}
+.availability h1 {
+  margin: 5px;
+  font-size: 20px;
+}
+
+.availability p {
+  margin: 5px;
+  font-size: 20px;
+  color: #0000007a;
+}
+
+.descrioption h1 {
+  border-top: 1px solid rgba(128, 128, 128, 0.712);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+
+.descrioption h2 {
+  margin: 20px;
+  font-size: 18px;
+}
+
+.descrioption p {
+  margin: 20px;
+  font-size: 18px;
+}
+
+.related h1 {
+  margin: 50px;
+  font-size: 26px;
+}
+
+.produk h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 26px;
+}
+
+.detail-text .box button {
+  background-color: #c49b63;
+  color: white;
+  padding: 0 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.detail-text .box button:hover {
+  background-color: #c49b63;
+}
+
+.detail-text .box {
+  width: 100%;
+}
+
+/* ************ set responsive ************ */
+
+@media (min-width: 1200px) {
+  /* Bagian Index.html */
+  .carousel .banner-promo {
+    height: 3000px;
+  }
+
+  .shipping {
+    background-color: #d6b78a;
+    height: 100px;
+    width: 100px;
+    padding: 33px;
+    margin-bottom: 20px;
+  }
+
+  .kategori {
+    padding: 100px 0;
+  }
+
+  .item {
+    height: 250px;
+    width: 350px;
+  }
+
+  .k1 {
+    background: url(../asssets/img/biji-kopi.jpg);
+  }
+  .k2 {
+    background: url(../asssets/img/bubuk-kopi.jpg);
+  }
+  .k3 {
+    background: url(../asssets/img/mesin-kopi.jpg);
+  }
+
+  .txt {
+    background-color: #c49b63;
+    padding: 10px;
+  }
+
+  .kategori h2 {
+    letter-spacing: 5px;
+  }
+
+  /* produk */
+  .produk {
+    margin-top: 20px;
+    padding: 0 0 100px 0;
+  }
+
+  .produk h2 {
+    letter-spacing: 5px;
+  }
+
+  .produk-item {
+    background-color: white;
+    width: 255px;
+    height: 300px;
+    padding: 20px;
+    border: 2px solid #eaeaea;
+  }
+
+  .produk-item img {
+    height: 200px;
+  }
+
+  .produk-item h5 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .produk-item .text {
+    position: relative;
+  }
+
+  .produk-item:hover .bottom-area {
+    transform: scaleY(1);
+    transition: transform 0.5s;
+  }
+
+  .produk-item:hover .text h5 h6 {
+    transform: scaleY(0);
+
+    transition: transform 0.1s;
+  }
+
+  .bottom-area {
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    display: inline-block;
+    overflow: hidden;
+    padding: 15px 20px;
+    transform: scaleY(0);
+    transition: transform 0.5;
+  }
+
+  .bottom-area .option {
+    position: absolute;
+  }
+
+  .produk .produk-item .text img {
+    height: 20px;
+  }
+
+  .produk .produk-item .text .op-item {
+    background-color: #c49b63;
+    height: 40px;
+    width: 40px;
+    padding-top: 15%;
+  }
+
+  .produk .produk-item .text .op-item:hover {
+    background-color: #9b743f;
+    height: 40px;
+    width: 40px;
+    padding-top: 15%;
+  }
+
+  /* footer */
+
+  .menu-footer,
+  .question {
+    display: block;
+  }
+
+  .footer-mobile {
+    display: none;
+  }
+
+  /* ------- modal ------- */
+  .modal-cart {
+    overflow-y: scroll;
+    max-height: 500px;
+  }
+
+  .col-modal-img {
+    margin: 0;
+  }
+
+  .btn-beli {
+    background-color: #c49b63;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 500;
+  }
+
+  .btn-beli:hover {
+    background-color: #9b743f;
+    color: white;
+    transition: 0.7s;
+  }
+
+  .total-harga {
+    padding: 20px;
+  }
+
+  .modal-cart input {
+    width: 50px !important;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px !important;
+  }
+
+  .modal-cart .box {
+    margin-bottom: 10px;
+  }
+
+  .modal-cart .box button {
+    background-color: #c49b63;
+    color: white;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  .modal-cart .box button:hover {
+    background-color: #c49b63;
+  }
+
+  .modal-cart .card {
+    max-width: 540px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .modal-cart .txt-modal {
+    text-align: start;
+  }
+
+  /* bagian banner product.html */
+  .banner {
+    width: 100%;
+    height: 490px;
+    background: url(../asssets/img/banner1.jpg);
+    background-size: cover;
+  }
+
+  .banner h1 {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 20px;
+  }
+
+  .txt-banner {
+    height: 100%;
+    padding: 12% 0;
+  }
+
+  /* Bagian about.html */
+  .content-img {
+    height: 585px;
+    width: 475px;
+    overflow: hidden;
+  }
+
+  .content-text {
+    padding: 40px;
+  }
+}
