@@ -119,9 +119,10 @@ body {
   border: 2px solid #eaeaea;
 }
 
-.produk-item img {
+/* .produk-item img {
   height: 200px;
-}
+  width: 200px;
+} */
 
 .produk-item h5 {
   margin-top: 10px;
