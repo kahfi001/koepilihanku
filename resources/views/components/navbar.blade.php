@@ -35,11 +35,19 @@
                   </div>
                 </a>
               </li>
+              <form class="d-flex ms-1">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn search-btn" type="submit">Search</button>
+              </form>
+              <li>
+                <a class="nav-link ms-3 me-2 d-flex justify-content-center {{ ($tittle === "Login") ? 'active' : '' }}" href="/login">
+                  <div class="icon-navbar nav-item" style="cursor: pointer">
+                    <i class="fas fa-user-circle fa-lg me-2"></i>Login
+                  </div>
+                </a>
+              </li>
             </ul>
-            <form class="d-flex ms-1">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn search-btn" type="submit">Search</button>
-            </form>
+            
           </div>
         </div>
       </nav>

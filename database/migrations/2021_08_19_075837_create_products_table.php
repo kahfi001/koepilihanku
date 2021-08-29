@@ -19,7 +19,6 @@ class CreateProductsTable extends Migration
             $table->string('kategori');
             $table->integer('harga');
             $table->string('gambar');
-            $table->string('harga_rupiah');
             $table->timestamps();
         });
     }

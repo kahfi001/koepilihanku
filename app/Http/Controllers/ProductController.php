@@ -12,14 +12,16 @@ class ProductController extends Controller
     {
         $products = Product::all();
         return view('shop', [
-            "tittle" => "Produk"
+            "tittle" => "Produk",
+            'footer' => 'yes'
         ], compact('products'));
     }
 
     public function create()
     {
         return view('admin/upload-product', [
-            "tittle" => "Produk"
+            "tittle" => "Produk",
+            'footer' => 'yes'
         ]);
     }
 
@@ -37,7 +39,6 @@ class ProductController extends Controller
         $produk->kategori = $kategori;
         $produk->harga = $harga;
         $produk->gambar = $gambar;
-        $produk->harga_rupiah = '';
         $produk->save();
         return redirect()->back();
     }

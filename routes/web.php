@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        "tittle" => "Home"
+        "tittle" => "Home",
+        'footer' => 'yes'
     ]);
 });
 
@@ -25,22 +29,35 @@ Route::get('/product',  [ProductController::class, 'frontend']);
 
 Route::get('/product-details', function () {
     return view('product-details', [
-        "tittle" => "Detail Product"
+        "tittle" => "Detail Product",
+        'footer' => 'yes'
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
-        "tittle" => "About"
+        "tittle" => "About",
+        'footer' => 'yes'
     ]);
 });
 
 Route::get('/whistlist', function () {
     return view('whistlist', [
-        "tittle" => "Whistlist"
+        "tittle" => "Whistlist",
+        'footer' => 'yes'
     ]);
 });
 
-Route::get('/admin', [ProductController::class, 'create']);
+Route::get('/product-admin', [ProductController::class, 'create']);
 
-Route::post('/admin', [ProductController::class, 'store']);
+Route::post('/product-admin', [ProductController::class, 'store']);
+
+Route::get('/admin', [DashboardController::class, 'tampil']);
+
+Route::get('/login', [LoginController::class, 'index']);
+
+
+
+Route::get('/register', [RegisterController::class, 'index']);
+
+Route::post('/register', [RegisterController::class, 'store']);

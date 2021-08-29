@@ -1,5 +1,5 @@
     <!-- Footer -->
-    <div class="bg-light" id="footer" style="margin-bottom: 40px">
+    <div class="bg-light" id="footer" style="margin-bottom: 40px; display: {{ ($footer === "no") ? 'none' : '' }}">
         <div class="container-md">
           <footer class="row row-cols-5 mt-5 border-top">
             <div class="col-md">
