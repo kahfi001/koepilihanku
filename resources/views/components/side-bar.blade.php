@@ -34,8 +34,8 @@
                     <i class="fas fa-fw fa-box-open"></i>
                     <span>Produk</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item {{ ($tittle == "User") ? 'active' : '' }}">
+                <a class="nav-link" href="/user">
                     <i class="fas fa-fw fa-user"></i>
                     <span>User</span></a>
             </li>

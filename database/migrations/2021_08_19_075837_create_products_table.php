@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->string('kategori');
             $table->integer('harga');
             $table->string('gambar');
+            $table->text('penjelasan_singkat');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }

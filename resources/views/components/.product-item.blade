@@ -1,0 +1,51 @@
+
+
+<div class="row">
+    @foreach ($products as $produk)
+        <div class="col-md-3 col-produk">
+            <a href="/">
+            <div class="produk-item mx-auto">
+                <img class="mx-auto d-block" width="200px" height="200px" style="display: block;" src="{{ asset('storage/foto-produk/'. $produk->gambar) }}" alt="" />
+                <div class="text">
+                <h5 class="text-center text-uppercase fw-bold">{{ $produk->nama }}</h5>
+                <h6 class="text-center">@currency($produk->harga)</h6>
+                <div class="bottom-area">
+                    <div class="row align-items-center my-auto">
+                    <div class="col-md">
+                        <a href="/productdetails.html">
+                        <div class="rounded-circle op-item mx-auto text-center">
+                            <span style="color: white">
+                            <i class="fas fa-money-bill-wave fa-sm"></i>
+                            </span>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="col-md">
+                        <div>
+                            <div class="rounded-circle op-item mx-auto text-center">
+                                 <button class="btn" style="padding: 0 !important">
+                                     <span style="color: white">
+                                     <i class="fas fa-shopping-cart fa-sm"></i>
+                                     </span>
+                                 </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <a href="">
+                        <div class="rounded-circle op-item mx-auto text-center" href="">
+                            <span style="color: white">
+                            <i class="fas fa-heart fa-sm"></i>
+                            </span>
+                        </div>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    @endforeach
+</div>
+

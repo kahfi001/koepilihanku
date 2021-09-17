@@ -9,7 +9,7 @@
     </div>
   </div>
 
-  <!-- Fliter -->
+  {{-- <!-- Fliter -->
   <div class="container-md filter">
     <div class="row text-center filter-row text-uppercase">
       <div class="offset-md-3 col-md-2 d-block align-self-center">
@@ -22,7 +22,7 @@
         <p>Mesin Kopi</p>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <!-- Produk -->
   <div class="container-md produk content-produk">

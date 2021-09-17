@@ -1,10 +1,17 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\WhistlistController;
+use App\Models\Cart;
+use App\Models\Payment;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,22 +24,14 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "tittle" => "Home",
-        'footer' => 'yes'
-    ]);
-});
+
+// ROUTE untuk user
+
+Route::get('/', [HomeController::class, 'index']);
 
 
 Route::get('/product',  [ProductController::class, 'frontend']);
 
-Route::get('/product-details', function () {
-    return view('product-details', [
-        "tittle" => "Detail Product",
-        'footer' => 'yes'
-    ]);
-});
 
 Route::get('/about', function () {
     return view('about', [
@@ -41,23 +40,42 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/whistlist', function () {
-    return view('whistlist', [
-        "tittle" => "Whistlist",
-        'footer' => 'yes'
-    ]);
+// Route::get('/whistlist', [WhistlistController::class, 'index']);
+Route::get('/cart', [CartController::class, 'index']);
+
+Route::get('/payment', [PaymentController::class, 'index']);
+Route::post('/add-to-payment', [CheckoutController::class, 'addToPayment']);
+Route::post('/payment', [PaymentController::class, 'updatePayment']);
+
+Route::get('/checkout', [CheckoutController::class, 'index']);
+Route::post('/checkout', [CheckoutController::class, 'addCheckOut']);
+Route::post('/checkout-carts', [CheckoutController::class, 'addCheckOutFromCart']);
+
+Route::get('/product/{produk:nama}', [ProductController::class, 'show']);
+Route::post('/add-to-cart', [ProductController::class, 'addCart']);
+
+Route::get('/success', function () {
+    return view('succes');
 });
 
-Route::get('/product-admin', [ProductController::class, 'create']);
+// ROUTE untuk admin
 
-Route::post('/product-admin', [ProductController::class, 'store']);
+Route::group(['middleware'=> ['auth', 'CekLevel:admin']], function() {
+    Route::get('/admin', [DashboardController::class, 'tampil']);
+    Route::get('/user', [RegisterController::class, 'indexAdmin']);
+    Route::post('/user', [RegisterController::class, 'tambahUser']);
+    
+    Route::get('/product-admin', [ProductController::class, 'create']);
+    Route::post('/product-admin', [ProductController::class, 'store']);
+});
 
-Route::get('/admin', [DashboardController::class, 'tampil']);
+// ROUTE untuk Authentication
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
-
-
-Route::get('/register', [RegisterController::class, 'index']);
-
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
+
+

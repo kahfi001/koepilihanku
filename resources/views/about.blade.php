@@ -4,7 +4,7 @@
     <!-- Banner -->
     <div class="banner">
         <div class="container txt-banner">
-          <h1 class="text-center shadow text-uppercase">About us</h1>
+          <h1 class="text-center shadow text-uppercase">Tentang Kami</h1>
         </div>
     </div>
   

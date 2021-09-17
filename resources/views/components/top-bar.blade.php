@@ -37,13 +37,23 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fas fa-user-circle fa-lg me-2"></i>
+                              <div class="text-dark">
+                                  {{ auth()->user()->username }}
+                              </div>
                             </a>
-                        </li>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm me-2"></i>Profil</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item">
+                                  <i class="fas fa-sign-out-alt fa-sm me-2"></i>Logout
+                                </button>
+                              </form>
+                            </ul>
+                          </li>
 
                     </ul>
 

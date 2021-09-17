@@ -1,9 +1,11 @@
 <!-- Modal -->
-<div class="modal fade" id="inputModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+<div class="modal fade" id="inputModal" tabindex="-1" aria-labelledby="inputModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Keranjang</h5>
+        <h5 class="modal-title" id="inputModalLabel">Tambah Produk</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body modal-cart">
@@ -19,8 +21,16 @@
                       <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Masukkan kategori">
                     </div>
                     <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label">Penjelasan Singkat</label>
+                      <input type="text" class="form-control" name="penjelasan" id="penjelasan" placeholder="Masukkan Penjelasan Singkat">
+                    </div>
+                    <div class="mb-3">
                       <label for="formGroupExampleInput2" class="form-label">Harga</label>
                       <input type="number" class="form-control" name="harga" id="harga" placeholder="Masukkan Harga">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Deskripsi:</label>
+                      <textarea class="form-control" id="deskripsi" name="deskripsi"></textarea>
                     </div>
                     <div class="input-group mb-4">
                       <label class="input-group-text" for="inputGroupFile01">Upload</label>
@@ -36,3 +46,4 @@
     </div>
   </div>
 </div>
+

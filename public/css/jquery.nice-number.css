@@ -1,6 +1,6 @@
 .nice-number {
   display: inline-flex;
-  justify-content: stretch;
+  justify-content: center !important;
 }
 
 .nice-number input {
