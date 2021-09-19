@@ -27,6 +27,7 @@
                 @csrf
                 <input type="hidden" name="id" id="id" value="{{ auth()->user()->id }}">
                 <input type="hidden" name="no_payment" id="no_payment" value="{{ $pay->no_payment }}">
+                <input type="hidden" name="no_checkout" id="no_checkout" value="{{ $pay->no_checkout }}">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" value="{{ auth()->user()->username }}" name="username" id="username" aria-label="Username" aria-describedby="basic-addon1" readonly>
                 </div>

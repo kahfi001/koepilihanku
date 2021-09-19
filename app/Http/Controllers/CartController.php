@@ -105,8 +105,12 @@ class CartController extends Controller
      * @param  \App\Models\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy(Request $request)
     {
-        //
+        $cartId = $request->input('cartId');
+        DB::table('carts')
+        ->where('id', '=', $cartId)
+        ->delete();
+        return redirect('/cart');
     }
 }

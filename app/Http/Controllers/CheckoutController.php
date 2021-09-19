@@ -12,7 +12,7 @@ use function PHPUnit\Framework\returnValue;
 
 class CheckoutController extends Controller
 {
-    public function index()
+    public function index(Checkout $cout)
     {
         $Uid = auth()->user()->id;
         $checkout = DB::table('checkouts')
@@ -37,7 +37,8 @@ class CheckoutController extends Controller
 
         return view('checkout', [
             "tittle" => "Checkout",
-            'footer' => 'yes'
+            'footer' => 'yes',
+            "cout" => $cout
         ], compact('checkout'))->with('dataCheckout', $dataCheckout)->with('noCheckout', $no_checkout);
     }
 
@@ -58,6 +59,13 @@ class CheckoutController extends Controller
         $co->is_from_cart = false;
         $co->save();
 
+        $no_checkout = DB::table('checkouts')
+        ->where('user_id', '=', $idUser)
+        ->where('is_paid', '=', false)
+        ->orderBy('checkouts.id', 'desc')
+        ->limit(1)
+        ->value('no_checkout');
+
         $idProduk = $request->input('id');
         $namaProduk = $request->input('nama');
         $no_checkout = DB::table('checkouts')
@@ -76,7 +84,7 @@ class CheckoutController extends Controller
         $cod->save();
 
 
-        return redirect()->intended('/checkout');
+        return redirect()->intended("/checkout/$no_checkout");
     }
 
     public function addCheckOutFromCart(Request $request)
@@ -120,7 +128,7 @@ class CheckoutController extends Controller
         }
 
 
-        return redirect()->intended('/checkout');
+        return redirect()->intended("/checkout/$no_checkout");
     }
 
     public function addToPayment(Request $request)
@@ -139,6 +147,8 @@ class CheckoutController extends Controller
         $kodepos = $request->input('kodepos');
         $provinsi = $request->input('provinsi');
         $notelepon = $request->input('notelepon');
+
+        
 
         if ($fromCart == true) {
 
@@ -159,7 +169,12 @@ class CheckoutController extends Controller
             ->where('user_id', '=', $idUser )
             ->update(['is_checkout' => true]);
 
-            return redirect()->intended('/payment');
+            $no_payment = DB::table('payments')
+            ->where('id_user', '=', $idUser)
+            ->orderBy('payments.id', 'desc')
+            ->limit(1)
+            ->value('no_payment');
+
         } else {
             $pay = new Payment();
             $pay->id_user = $idUser;
@@ -174,10 +189,16 @@ class CheckoutController extends Controller
             $pay->status = 'Belum Dibayar';
             $pay->save();
 
-            return redirect()->intended('/payment');
+            $no_payment = DB::table('payments')
+            ->where('id_user', '=', $idUser)
+            ->orderBy('payments.id', 'desc')
+            ->limit(1)
+            ->value('no_payment');
 
         }
         
+        return redirect()->intended("/payment/$no_payment");
+
 
     }
 }

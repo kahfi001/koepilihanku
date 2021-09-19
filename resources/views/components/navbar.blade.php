@@ -4,7 +4,7 @@
           <a class="navbar-brand" href="/">
             <img src="/asssets/img/navbar-logo.png" alt="" height="40" />
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -33,8 +33,8 @@
               @endauth
 
               
-              <form class="d-flex ms-1">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <form class="d-flex ms-1" action="/product">
+                <input class="form-control me-2" type="search" name="search" placeholder="Search . . ." value="{{ request('search') }}" aria-label="Search" />
                 <button class="btn search-btn" type="submit">Search</button>
               </form>
 
@@ -45,7 +45,7 @@
                     <span>{{ auth()->user()->username }}</span>
                   </a>
                   <ul class="dropdown-menu ms-auto mb-2 mb-lg-0" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/"><i class="fas fa-tasks fa-sm me-2"></i></i>Daftar Transaksi</a></li>
+                    <li><a class="dropdown-item" href="/daftar-transaksi"><i class="fas fa-tasks fa-sm me-2"></i></i>Daftar Transaksi</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
                       <form action="/logout" method="POST">

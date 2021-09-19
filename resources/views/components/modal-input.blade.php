@@ -17,10 +17,6 @@
                       <input type="text" class="form-control" name="namaProduk" id="nama" placeholder="Masukkan nama produk">
                     </div>
                     <div class="mb-3">
-                      <label for="formGroupExampleInput2" class="form-label">Kategori</label>
-                      <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Masukkan kategori">
-                    </div>
-                    <div class="mb-3">
                       <label for="formGroupExampleInput2" class="form-label">Penjelasan Singkat</label>
                       <input type="text" class="form-control" name="penjelasan" id="penjelasan" placeholder="Masukkan Penjelasan Singkat">
                     </div>

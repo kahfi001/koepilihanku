@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\DaftarTransaksiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
@@ -41,22 +42,29 @@ Route::get('/about', function () {
 });
 
 // Route::get('/whistlist', [WhistlistController::class, 'index']);
-Route::get('/cart', [CartController::class, 'index']);
 
-Route::get('/payment', [PaymentController::class, 'index']);
-Route::post('/add-to-payment', [CheckoutController::class, 'addToPayment']);
-Route::post('/payment', [PaymentController::class, 'updatePayment']);
-
-Route::get('/checkout', [CheckoutController::class, 'index']);
-Route::post('/checkout', [CheckoutController::class, 'addCheckOut']);
-Route::post('/checkout-carts', [CheckoutController::class, 'addCheckOutFromCart']);
-
-Route::get('/product/{produk:nama}', [ProductController::class, 'show']);
-Route::post('/add-to-cart', [ProductController::class, 'addCart']);
-
-Route::get('/success', function () {
-    return view('succes');
+Route::group(['middleware'=> ['auth', 'CekLevel:user']], function(){
+    Route::get('/cart', [CartController::class, 'index']);
+    Route::post('/cart', [CartController::class, 'destroy']);
+    
+    Route::get('/daftar-transaksi', [DaftarTransaksiController::class, 'index']);
+    
+    Route::get('/payment/{py:no_payment}', [PaymentController::class, 'index']);
+    Route::post('/add-to-payment', [CheckoutController::class, 'addToPayment']);
+    Route::post('/payment', [PaymentController::class, 'updatePayment']);
+    
+    Route::get('/checkout/{cout:no_checkout}', [CheckoutController::class, 'index']);
+    Route::post('/checkout', [CheckoutController::class, 'addCheckOut']);
+    Route::post('/checkout-carts', [CheckoutController::class, 'addCheckOutFromCart']);
+    
+    Route::get('/product/{produk:nama}', [ProductController::class, 'show']);
+    Route::post('/add-to-cart', [ProductController::class, 'addCart']);
+    
+    Route::get('/success', function () {
+        return view('succes');
+    });
 });
+
 
 // ROUTE untuk admin
 

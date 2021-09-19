@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    public function scopeFilter($query)
+    {
+        if (request('search')) {
+            return $query->where('nama', 'like', '%'.request('search').'%');
+        }
+    }
 }

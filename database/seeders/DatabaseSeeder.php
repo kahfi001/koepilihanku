@@ -65,5 +65,77 @@ class DatabaseSeeder extends Seeder
             'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
             'gambar' => 'abc.jpeg'
         ]);
+        Product::create([
+            'nama' => 'Kopi Wonosalam',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '40000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
+        Product::create([
+            'nama' => 'Robusta Belawan',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '30000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
+        Product::create([
+            'nama' => 'Arabika Belawan',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '30000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
+        Product::create([
+            'nama' => 'Robusta Super',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '20000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
+        Product::create([
+            'nama' => 'Tulungagung',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '20000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
+        Product::create([
+            'nama' => 'Blitar',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '20000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
+        Product::create([
+            'nama' => 'Lampung',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '20000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
+        Product::create([
+            'nama' => 'Banyuwangi',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '20000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
+        Product::create([
+            'nama' => 'Dampit',
+            'kategori' => 'Bubuk Kopi',
+            'harga' => '20000',
+            'penjelasan_singkat' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, blanditiis?',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae ullam veniam doloribus nostrum delectus, eius facilis eum reiciendis. Fugit, autem corrupti ab voluptatem nihil enim quod. Sapiente, dignissimos esse. Quia officiis quasi a architecto officia ab maiores beatae molestias eos optio, alias in nobis, tempore rem! Officiis expedita quis aperiam in quam voluptatem at ipsam, sit nam maiores amet illum sint vero modi esse totam voluptates dolorum, magni dolore corporis doloremque molestias nobis laborum? Reprehenderit iusto dignissimos distinctio ratione.',
+            'gambar' => 'abc.jpeg'
+        ]);
     }
 }

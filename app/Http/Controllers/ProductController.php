@@ -6,17 +6,18 @@ use App\Models\Cart;
 use App\Models\Product;
 use App\Models\Whistlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
 
     public function frontend()
     {
-        $products = Product::all();
         return view('shop', [
             "tittle" => "Produk",
-            'footer' => 'yes'
-        ], compact('products'));
+            'footer' => 'yes',
+            "products" => Product::latest()->filter()->paginate(12)
+        ]);
     }
 
     public function create()
@@ -32,7 +33,6 @@ class ProductController extends Controller
     {
         $gambar = $request->file('gambar')->getClientOriginalName(); 
         $nama = $request->input('namaProduk');
-        $kategori = $request->input('kategori');
         $penjelasan = $request->input('penjelasan');
         $deskripsi = $request->input('deskripsi');
         $harga = $request->input('harga');
@@ -41,7 +41,7 @@ class ProductController extends Controller
 
         $produk = new Product();
         $produk->nama = $nama;
-        $produk->kategori = $kategori;
+        $produk->kategori = 'Bubuk Kopi';
         $produk->penjelasan_singkat = $penjelasan;
         $produk->deskripsi = $deskripsi;
         $produk->harga = $harga;
@@ -68,7 +68,7 @@ class ProductController extends Controller
         $cart->harga = $hargaCart;
         $cart->is_checkout = false;
         $cart->save();
-        return redirect()->back();
+        return redirect()->intended("/product/$nama");
     }
     public function addWhistlist(Request $request)
     {

@@ -7,7 +7,7 @@
     <div class="container txt-banner">
       <h1 class="text-center shadow text-uppercase">Produk</h1>
     </div>
-  </div>
+</div>
 
   {{-- <!-- Fliter -->
   <div class="container-md filter">
@@ -25,11 +25,24 @@
   </div> --}}
 
   <!-- Produk -->
+
+  @if ($products->count())
   <div class="container-md produk content-produk">
     <h2 class="text-center fw-bold"  style="margin-bottom: 40px">Produk Kami</h2>
 
     @include('components.product-item')
 
+    <div class="d-flex justify-content-center">
+      {{ $products->links() }}
+    </div>
+
+
   </div>
+  @else
+  <div class="container my-4 text-center">
+      <h3>Tidak Ada Data</h3>
+  </div>
+  @endif
+
     
 @endsection

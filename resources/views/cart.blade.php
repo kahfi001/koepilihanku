@@ -30,7 +30,11 @@
             @foreach ($carts as $item)   
               <tr>
                 <th style="vertical-align: middle; width: 5%" scope="row">
-                    <button type="button" class="btn-close" aria-label="Close"></button>
+                  <form action="/cart" method="POST">
+                    @csrf
+                    <input type="hidden" name="cartId" value="{{ $cartId }}">
+                    <button onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn-close" aria-label="Close"></button>
+                  </form>
                 </th>
                 <td style="width: 25%; vertical-align: middle">
                   <img src="{{ asset('storage/foto-produk/'. $item->gambar) }}" width="100px" alt="" />
