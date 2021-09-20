@@ -22,7 +22,7 @@
  <div class="container py-3">
     <h4>Data Pemesanan</h4>
     <div class="row">
-        <div class="col-lg-7">
+        <div class="col-lg-7 mb-3">
             <form action="/payment" method="POST" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="id" id="id" value="{{ auth()->user()->id }}">
@@ -53,15 +53,16 @@
                     <input type="file" class="form-control" name="bukti" id="inputGroupFile01" aria-describedby="paymentHelp">
                 </div>
                 <div id="paymentHelp" class="form-text mb-3">Pastikan Jumlah Pembayaran sesuai dengan Tagihan</div>
-                <div class="input-group mb-3">
+                <div class="input-group ">
                     <textarea class="form-control" id="catatan" name="catatan" placeholder="Catatan"></textarea>
                 </div>
+                <div id="paymentHelp" class="form-text mb-3">Contoh : Dikirim dalam bentuk bubuk atau biji kopi</div>
                 <button type="submit" class="btn search-btn">Konfirmasi Pembayaran</button>
               </form>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5 ">
             <div class="h5">No. Pembayaran : {{ $pay->no_payment }}</div>
-                <div class="box" style="border: solid 1px; border-radius: 10px; padding:20px">
+                <div class="box mb-3" style="border: solid 1px; border-radius: 10px; padding:20px">
                     <h6 class="fw-bold">Total Harga</h6>
                     <div class="row">
                         <div class="col-md">
@@ -86,6 +87,19 @@
                         </div>
                         <div class="col-md">
                             <p class="fw-bold">@currency($pay->total)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box" style="border: solid 1px; border-radius: 10px; padding:20px">
+                    <h6 class="fw-bold">Transfer Pembayaran</h6>
+                    <div class="row">
+                        <div class="col-md d-inline">
+                            <i class="fas fa-money-check"></i>
+                            <p>Bank BTN</p>
+                        </div>
+                        <div class="col-md">
+                            <p>0025801560013819</p>
+                            <p>(A.N Muhammad Kahfi)</p>
                         </div>
                     </div>
                 </div>

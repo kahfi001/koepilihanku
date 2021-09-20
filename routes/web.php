@@ -8,8 +8,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\WhistlistController;
 use App\Models\Cart;
 use App\Models\Payment;
@@ -41,9 +43,14 @@ Route::get('/about', function () {
     ]);
 });
 
+
+
 // Route::get('/whistlist', [WhistlistController::class, 'index']);
 
 Route::group(['middleware'=> ['auth', 'CekLevel:user']], function(){
+
+    Route::get('/profil', [ProfilController::class, 'index']);
+    
     Route::get('/cart', [CartController::class, 'index']);
     Route::post('/cart', [CartController::class, 'destroy']);
     
@@ -82,6 +89,8 @@ Route::group(['middleware'=> ['auth', 'CekLevel:admin']], function() {
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('/auth/google/callback', 'App\Http\Controllers\GoogleController@handleGoogleCallback');
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);

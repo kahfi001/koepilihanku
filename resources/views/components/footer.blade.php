@@ -12,10 +12,9 @@
             <div class="col-md menu-footer">
               <h5>Menu</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shop</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
+                <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="/product" class="nav-link p-0 text-muted">Shop</a></li>
+                <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About</a></li>
               </ul>
             </div>
   
@@ -38,7 +37,7 @@
                       <i class="fab fa-whatsapp my-2"></i>
                     </div>
                     <div class="col-md-10 d-flex align-items-center">
-                      <h6>082939329323</h6>
+                      <h6>081246504639</h6>
                     </div>
                   </div>
                 </div>
@@ -48,7 +47,7 @@
                       <i class="fas fa-envelope my-2"></i>
                     </div>
                     <div class="col-md-10 d-flex align-items-center">
-                      <h6>abcd@gmail.com</h6>
+                      <h6>manifestocoffee2@gmail.com</h6>
                     </div>
                   </div>
                 </div>
@@ -73,7 +72,7 @@
                   <i class="fab fa-whatsapp my-2"></i>
                 </div>
                 <div class="col-md-10 d-flex align-items-center">
-                  <h6>082939329323</h6>
+                  <h6>081246504639</h6>
                 </div>
               </div>
             </div>
@@ -83,7 +82,7 @@
                   <i class="fas fa-envelope my-2"></i>
                 </div>
                 <div class="col-md-10 d-flex align-items-center">
-                  <h6>abcd@gmail.com</h6>
+                  <h6>manifestocoffee2@gmail.com</h6>
                 </div>
               </div>
             </div>

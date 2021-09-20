@@ -59,7 +59,6 @@
                   </div>
                   <button class="w-100 btn btn-lg my-3 search-btn" type="submit">Daftar</button>
                 </form>
-                <button class="w-100 btn btn-lg mb-3 disabled btn-outline-danger" type="submit"><i class="fab fa-google fa-md me-2"></i>Masuk dengan akun Google</button>
                 <small class="d-block text-center">Sudah Punya Akun? <a href="/login">Masuk</a> </small>
             </main>
         </div>

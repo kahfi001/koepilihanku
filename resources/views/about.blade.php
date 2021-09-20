@@ -21,13 +21,8 @@
             <div class="content-text">
               <h2>Manifesto Coffee</h2>
               <p>
-                Reprehenderit irure mollit ad cupidatat consectetur Lorem reprehenderit veniam duis duis. Elit dolor irure veniam incididunt pariatur nulla culpa ad dolore magna consectetur pariatur in id. Cillum veniam eu veniam consectetur
-                nostrud laboris occaecat aute proident. Sit deserunt cupidatat tempor culpa laborum proident tempor. Exercitation consectetur laborum pariatur est. Aute adipisicing ut laboris est dolor excepteur laboris. Incididunt anim
-                deserunt sint fugiat cupidatat fugiat commodo occaecat do ex Lorem ipsum. Culpa esse minim et elit ea sit sint laboris occaecat sunt dolor in laborum do. Lorem in est eu eiusmod eiusmod minim occaecat enim. Voluptate tempor
-                cupidatat reprehenderit id esse. Sint commodo adipisicing ut cupidatat. Nulla voluptate anim voluptate incididunt ad exercitation. Ullamco ipsum sint laboris adipisicing consectetur commodo ex ullamco ullamco eu quis.
-                Consectetur qui culpa ipsum ea do elit aliqua. Aute est esse commodo dolor laboris culpa pariatur consequat consequat qui et dolor dolor enim. Duis Lorem deserunt nisi incididunt laboris veniam labore do. Ipsum laborum velit
-                pariatur excepteur ut sunt sunt laboris occaecat dolor. Ad ea ipsum labore nulla nostrud id voluptate mollit. Enim nostrud magna non non eiusmod et consectetur. Sint consequat in nulla ea deserunt sunt laborum tempor laborum
-                officia aute nostrud occaecat.
+                Kopi merupakan komoditas penting dari pertanian Indonesia. Setiap tanaman kopi yang ditumbuhkan di berbagai daerah memiliki cita rasa yang berbeda pula. Oleh karena itu kami berkomitmen untuk menghadirkan kopi dengan kualitas terbaik yang berasal dari berbagai daerah di Indonesia untuk anda 
+              </p><p>Manifesto Coffe hadir ditengah-tengah masyarakat sebagai jawaban untuk dapat menikmati secangkir kopi untuk mengispirasi. Maka dari itu, kami selalu menjaga kualitas agar memberi anda kenikmatan kopi dari berbagai daerah di Indonesia
               </p>
             </div>
           </div>

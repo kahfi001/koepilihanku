@@ -61,21 +61,21 @@
           <div class="container-md kategori">
             <h2 class="text-center fw-bold" style="margin-bottom: 40px">Kategori</h2>
             <div class="row">
-              <div class="col-md kategori-list">
+              <div class="col-md-6 kategori-list">
                 <div class="item k1 d-flex align-items-end ms-auto me-auto shadow">
                   <div class="badge text-wrap txt" style="width: 6rem">Biji kopi</div>
                 </div>
               </div>
-              <div class="col-md kategori-list">
+              <div class="col-md-6 kategori-list">
                 <div class="item k2 d-flex align-items-end ms-auto me-auto shadow">
                   <div class="badge text-wrap txt" style="width: 6rem">Bubuk kopi</div>
                 </div>
               </div>
-              <div class="col-md kategori-list">
+              {{-- <div class="col-md kategori-list">
                 <div class="item k3 d-flex align-items-end ms-auto me-auto shadow">
                   <div class="badge text-wrap txt" style="width: 6rem">Mesin kopi</div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
 

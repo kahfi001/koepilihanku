@@ -46,6 +46,7 @@
                   </a>
                   <ul class="dropdown-menu ms-auto mb-2 mb-lg-0" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/daftar-transaksi"><i class="fas fa-tasks fa-sm me-2"></i></i>Daftar Transaksi</a></li>
+                    {{-- <li><a class="dropdown-item" href="/profil"><i class="fas fa-user-circle fa-sm me-2"></i></i>Profil</a></li> --}}
                     <li><hr class="dropdown-divider"></li>
                     <li>
                       <form action="/logout" method="POST">

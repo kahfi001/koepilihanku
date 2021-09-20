@@ -31,7 +31,7 @@ class PaymentController extends Controller
         $catatan = $request->input('catatan');
         $no_payment = $request->input('no_payment');
         $no_checkout = $request->input('no_checkout');
-        $status = "Sedang diproses";
+        $status = "Menunggu Konfirmasi";
 
         $request->file('bukti')->storeAs('public/bukti-bayar', $bukti);
 

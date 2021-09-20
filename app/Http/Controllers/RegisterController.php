@@ -45,6 +45,7 @@ class RegisterController extends Controller
         $user->email = $email;
         $user->password = $password;
         $user->level = "user";
+        $user->google_id = null;
         $user->save();
 
         // $request->session()->flash('success', 'Pendaftaran Berhasil, Silahkan login !');
