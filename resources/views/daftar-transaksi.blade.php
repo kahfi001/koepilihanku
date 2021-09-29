@@ -23,6 +23,22 @@
                         <div class="badge bg-success text-wrap" style="width: 12rem;">
                             <h6>{{ $item->status }}</h6>
                         </div>
+
+                        @if ($item->status == "Sedang dikirim")
+                            <div class="d-flex justify-content-end">
+                                <form action="/daftar-transaksi" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="id" id="id" value="{{ $item->id }}">
+                                    <button onclick="return confirm('Apakah anda yakin sudah menerima barang?')"class="btn search-btn">Konfirmasi Paket sudah diterima</button>
+                                </form>
+                            </div>
+                        @else
+                            <div class="d-flex justify-content-end d-none">
+                                <button onclick="return confirm('Apakah anda yakin sudah menerima barang?')" class="btn btn-search">Konfirmasi Paket sudah diterima</button>
+                            </div>
+                        @endif
+
+                        
                     </div>
                 </div>
             @endforeach

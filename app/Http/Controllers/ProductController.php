@@ -22,11 +22,11 @@ class ProductController extends Controller
 
     public function create()
     {
-        $productsTable = Product::all(); 
         return view('admin/upload-product', [
             "tittle" => "Produk",
-            'footer' => 'yes'
-        ], compact('productsTable'));
+            'footer' => 'yes',
+            "productsTable" => Product::latest()->paginate(5),
+        ]);
     }
 
     public function store(Request $request)
@@ -82,6 +82,49 @@ class ProductController extends Controller
         $whistlist->nama = $nama;
         $whistlist->save();
         return redirect()->back();
+    }
+
+    public function viewUpdate(Product $produk)
+    {
+        return view('admin/update-product', [
+            'tittle' => 'Update Product',
+            'footer' => 'yes',
+            'produk' => $produk
+        ]);
+    }
+
+    public function update(Request $request)
+    {
+        $id = $request->input('id');
+        $nama = $request->input('namaProduk');
+        $penjelasan = $request->input('penjelasan');
+        $harga = $request->input('harga');
+        $deskripsi = $request->input('deskripsi');
+        $gambar = $request->file('gambar')->getClientOriginalName();
+
+        $request->file('gambar')->storeAs('public/foto-produk', $gambar);
+
+        DB::table('products')
+        ->where('id', $id)
+        ->update([
+            'nama' => $nama,
+            'penjelasan_singkat' => $penjelasan,
+            'harga' => $harga,
+            'deskripsi' => $deskripsi,
+            'gambar' => $gambar,
+        ]);
+
+        return redirect()->intended('/product-admin');
+    }
+
+    public function destroy(Request $request)
+    {
+        $id = $request->input('id');
+        DB::table('products')
+        ->where('id', $id)
+        ->delete();
+        return redirect('/product-admin');
+
     }
 
     public function show(Product $produk)

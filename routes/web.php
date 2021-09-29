@@ -45,6 +45,7 @@ Route::get('/about', function () {
 
 
 
+
 // Route::get('/whistlist', [WhistlistController::class, 'index']);
 
 Route::group(['middleware'=> ['auth', 'CekLevel:user']], function(){
@@ -55,6 +56,7 @@ Route::group(['middleware'=> ['auth', 'CekLevel:user']], function(){
     Route::post('/cart', [CartController::class, 'destroy']);
     
     Route::get('/daftar-transaksi', [DaftarTransaksiController::class, 'index']);
+    Route::post('/daftar-transaksi', [DaftarTransaksiController::class, 'konfirmasiDiterima']);
     
     Route::get('/payment/{py:no_payment}', [PaymentController::class, 'index']);
     Route::post('/add-to-payment', [CheckoutController::class, 'addToPayment']);
@@ -79,9 +81,22 @@ Route::group(['middleware'=> ['auth', 'CekLevel:admin']], function() {
     Route::get('/admin', [DashboardController::class, 'tampil']);
     Route::get('/user', [RegisterController::class, 'indexAdmin']);
     Route::post('/user', [RegisterController::class, 'tambahUser']);
+    Route::post('/hapus-user', [RegisterController::class, 'destroy']);
     
+    Route::get('/transaksi', [PaymentController::class, 'indexTransaksi']);
+
+    Route::get('/konfirmasi-pembayaran', [PaymentController::class, 'konfirmPayment']);
+    Route::get('/detail-pembayaran/{payment:no_payment}', [PaymentController::class, 'detailPayment']);
+    Route::post('/konfirmasi-bayar', [PaymentController::class, 'updateKonfirmasiPembayaran']);
+    
+
     Route::get('/product-admin', [ProductController::class, 'create']);
     Route::post('/product-admin', [ProductController::class, 'store']);
+    Route::get('/product-admin/update/{produk:id}', [ProductController::class, 'viewUpdate']);
+    Route::post('/product-update', [ProductController::class, 'update']);
+    Route::post('/hapus-produk', [ProductController::class, 'destroy']);
+
+
 });
 
 // ROUTE untuk Authentication

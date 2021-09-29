@@ -50,7 +50,7 @@
                 </div>
                 <div class="input-group mb-1">
                     <label class="input-group-text" for="inputGroupFile01">Upload Bukti Pembayaran</label>
-                    <input type="file" class="form-control" name="bukti" id="inputGroupFile01" aria-describedby="paymentHelp">
+                    <input type="file" class="form-control" name="bukti" id="inputGroupFile01" aria-describedby="paymentHelp" required>
                 </div>
                 <div id="paymentHelp" class="form-text mb-3">Pastikan Jumlah Pembayaran sesuai dengan Tagihan</div>
                 <div class="input-group ">

@@ -1,7 +1,7 @@
 @extends('layout.layout-admin')
 
 @section('konten')
-<button type="submit" class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#inputModalUser">Tambahkan User</button>
+<button type="button" class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#inputModalUser">Tambahkan User</button>
 
 <div class="card shadow mb-4">
   <div class="card-header py-3">
@@ -16,7 +16,7 @@
                     <th scope="col">Nama Lengkap</th>
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">Level</th>
                     <th scope="col">Action</th>
                 </tr>
                 <tbody>
@@ -31,8 +31,11 @@
                         <td class="text-uppercase" style="vertical-align: middle">{{ $user->level }}</td>
                         <td style="vertical-align: middle">
                           <div class="text-center">
-                            <button type="submit" class="btn btn-primary text-uppercase" style="width: 100px">Update</button>
-                            <button type="submit" class="btn btn-danger text-uppercase" style="width: 100px">Hapus</button>
+                            <form action="/hapus-user" method="POST">
+                              @csrf
+                              <input type="hidden" name="id" id="id" value="{{ $user->id }}">
+                              <button onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger text-uppercase" style="width: 100px">Hapus</button>
+                            </form> 
                           </div>
                         </td>
                       </tr>

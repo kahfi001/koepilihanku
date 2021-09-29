@@ -5,7 +5,7 @@
    <!-- Banner -->
    <div class="banner">
     <div class="container txt-banner">
-      <h1 class="text-center shadow text-uppercase">Cart</h1>
+      <h1 class="text-center shadow text-uppercase">Keranjang</h1>
     </div>
   </div>
 

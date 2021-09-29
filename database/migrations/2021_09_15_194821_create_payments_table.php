@@ -29,6 +29,7 @@ class CreatePaymentsTable extends Migration
             $table->string('catatan')->nullable();
             $table->string('gambar')->nullable();
             $table->string('status');
+            $table->integer('approve_by')->nullable();
             $table->timestamps();
         });
     }

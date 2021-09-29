@@ -44,8 +44,6 @@
                               </div>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm me-2"></i>Profil</a></li>
-                              <li><hr class="dropdown-divider"></li>
                               <form action="/logout" method="POST">
                                 @csrf
                                 <button type="submit" class="dropdown-item">
