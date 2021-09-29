@@ -13,13 +13,13 @@
                 <a class="nav-link {{ ($tittle === "Home") ? 'active' : '' }} text-uppercase" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "Produk") ? 'active' : '' }} text-uppercase" href="/product">Shop</a>
+                <a class="nav-link {{ ($tittle === "Produk") ? 'active' : '' }} text-uppercase" href="/product">Produk</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ ($tittle === "About") ? 'active' : '' }} text-uppercase" href="/about">About</a>
+                <a class="nav-link {{ ($tittle === "About") ? 'active' : '' }} text-uppercase" href="/about">Tentang</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-uppercase"  href="#footer">Contact</a>
+                <a class="nav-link text-uppercase"  href="#footer">Kontak</a>
               </li>
 
               @auth
@@ -34,8 +34,8 @@
 
               
               <form class="d-flex ms-1" action="/product">
-                <input class="form-control me-2" type="search" name="search" placeholder="Search . . ." value="{{ request('search') }}" aria-label="Search" />
-                <button class="btn search-btn" type="submit">Search</button>
+                <input class="form-control me-2" type="search" name="search" placeholder="Cari . . ." value="{{ request('search') }}" aria-label="Search" />
+                <button class="btn search-btn" type="submit">Cari</button>
               </form>
 
               @auth

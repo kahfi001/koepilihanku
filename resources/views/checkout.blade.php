@@ -16,28 +16,30 @@
             {{-- Produk item --}}
             <div class="container py-3">
                 <div class="h4">Produk yang di Checkout</div>
-                <table class="table">
-                    <thead class="table-whistlist">
-                    <tr>
-                        <th scope="col">Produk</th>
-                        <th scope="col">Nama Produk</th>
-                        <th scope="col">Qty</th>
-                        <th scope="col">Harga</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach ($dataCheckout as $item)   
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="table-whistlist">
                         <tr>
-                        <td style="width: 25%; vertical-align: middle">
-                            <img src="{{ asset('storage/foto-produk/'. $item->gambar) }}" width="100px" alt="" />
-                        </td>
-                        <td class="fw-bold text-uppercase" style="vertical-align: middle">{{ $item->nama_produk }}</td>
-                        <td style="vertical-align: middle">{{ $item->qty }}</td>
-                        <td style="vertical-align: middle">@currency($item->harga)</td>
+                            <th scope="col">Produk</th>
+                            <th scope="col">Nama Produk</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Harga</th>
                         </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        @foreach ($dataCheckout as $item)   
+                            <tr>
+                            <td style="width: 25%; vertical-align: middle">
+                                <img src="{{ asset('storage/foto-produk/'. $item->gambar) }}" width="100px" alt="" />
+                            </td>
+                            <td class="fw-bold text-uppercase" style="vertical-align: middle">{{ $item->nama_produk }}</td>
+                            <td style="vertical-align: middle">{{ $item->qty }}</td>
+                            <td style="vertical-align: middle">@currency($item->harga)</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
                 <hr class="mt-4">
             </div>
 
@@ -57,21 +59,21 @@
                             <input type="text" class="form-control" value="{{ auth()->user()->username }}" name="username" id="username" aria-label="Username" aria-describedby="basic-addon1" readonly>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Nama Lengkap" name="nama" id="nama" aria-label="nama" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="Nama Lengkap" name="nama" id="nama" aria-label="nama" aria-describedby="basic-addon1" required>
                         </div>
                         <div class="input-group mb-3">
-                            <textarea class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
+                            <textarea class="form-control" id="alamat" name="alamat" placeholder="Alamat" required></textarea>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Kota" name="kota" id="kota" aria-label="kota" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="Kota" name="kota" id="kota" aria-label="kota" aria-describedby="basic-addon1" required>
                             <span class="input-group-text"> </span>
-                            <input type="number" class="form-control" placeholder="Kode Pos" name="kodepos" id="kodepos" aria-label="kodepos" aria-describedby="basic-addon1">
+                            <input type="number" class="form-control" placeholder="Kode Pos" name="kodepos" id="kodepos" aria-label="kodepos" aria-describedby="basic-addon1" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Provinsi" name="provinsi" id="provinsi" aria-label="provinsi" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="Provinsi" name="provinsi" id="provinsi" aria-label="provinsi" aria-describedby="basic-addon1" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="No. Telepon" name="notelepon" id="notelepon" aria-label="notelepon" aria-describedby="basic-addon1">
+                            <input type="number" class="form-control" placeholder="No. Telepon" name="notelepon" id="notelepon" aria-label="notelepon" aria-describedby="basic-addon1" required>
                         </div>
                         <button type="submit" class="btn search-btn">Lanjutkan Pembayaran</button>
                     </form>

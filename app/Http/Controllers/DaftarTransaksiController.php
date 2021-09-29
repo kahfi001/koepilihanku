@@ -23,4 +23,14 @@ class DaftarTransaksiController extends Controller
             'footer' => 'yes',
         ], compact('payment'));
     }
+
+    public function konfirmasiDiterima(Request $request)
+    {
+        $id = $request->input('id');
+        DB::table('payments')
+        ->where('id', $id)
+        ->update(['status' => 'Paket Sudah diterima']);
+
+        return redirect()->intended('/daftar-transaksi');
+    }
 }

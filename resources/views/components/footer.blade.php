@@ -13,13 +13,13 @@
               <h5>Menu</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
-                <li class="nav-item mb-2"><a href="/product" class="nav-link p-0 text-muted">Shop</a></li>
-                <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About</a></li>
+                <li class="nav-item mb-2"><a href="/product" class="nav-link p-0 text-muted">Produk</a></li>
+                <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">Tentang</a></li>
               </ul>
             </div>
   
             <div class="col-md question">
-              <h5>Have Questions?</h5>
+              <h5>Hubungi Kami di :</h5>
               <ul class="nav flex-column">
                 <div>
                   <div class="row">

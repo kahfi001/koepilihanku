@@ -26,7 +26,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Manage data
             </div>
 
             <li class="nav-item {{ ($tittle == "Produk") ? 'active' : '' }}">
@@ -39,10 +39,15 @@
                     <i class="fas fa-fw fa-user"></i>
                     <span>User</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
+            <li class="nav-item {{ ($tittle == "Rekap Transaksi") ? 'active' : '' }}">
+                <a class="nav-link" href="/transaksi">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>Rekap Transaksi</span></a>
+            </li>
+            <li class="nav-item {{ ($tittle == "Konfirmasi Pembayaran") ? 'active' : '' }}">
+                <a class="nav-link" href="/konfirmasi-pembayaran">
                     <i class="fas fa-fw fa-shipping-fast"></i>
-                    <span>Pembelian</span></a>
+                    <span>Konfirmasi Pembayaran</span></a>
             </li>
 
             <!-- Divider -->

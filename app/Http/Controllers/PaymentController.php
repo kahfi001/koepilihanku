@@ -25,6 +25,43 @@ class PaymentController extends Controller
         ], compact('payment'));
     }
 
+    public function konfirmPayment()
+    {
+        return view('admin.pembayaran', [
+            "tittle" => "Konfirmasi Pembayaran",
+            "footer" => 'yes',
+            "pay" => Payment::latest()->where('status', 'Menunggu Konfirmasi')->paginate(10)
+        ]);
+    }
+
+    public function detailPayment(Payment $payment)
+    {
+        $detail = DB::table('payments')
+        ->join('detail_checkouts', 'payments.no_checkout', '=', 'detail_checkouts.no_checkout')
+        ->join('products', 'products.id', '=', 'detail_checkouts.product_id')
+        ->select('detail_checkouts.id', 'products.gambar', 'detail_checkouts.nama_produk', 'detail_checkouts.qty', 'detail_checkouts.harga')
+        ->where('payments.no_payment', $payment->no_payment)
+        ->get();
+
+        return view('admin/detail-pembayaran', [
+            "tittle" => "Detail Pembayaran",
+            "footer" => "yes",
+            "payment" => $payment
+        ])->with('detail', $detail);
+    }
+
+    public function updateKonfirmasiPembayaran(Request $request)
+    {
+        $idUser = $request->input('idUser');
+        $id = $request->input('id');
+
+        DB::table('payments')
+        ->where('id', $id)
+        ->update(['status' => 'Sedang dikirim', 'approve_by' => $idUser]);
+
+        return redirect()->intended('/konfirmasi-pembayaran');
+    }
+
     public function updatePayment(Request $request)
     {
         $bukti = $request->file('bukti')->getClientOriginalName(); 
@@ -45,5 +82,18 @@ class PaymentController extends Controller
 
         return redirect()->intended('/success');
 
+    }
+
+    public function indexTransaksi()
+    {
+        $payment = DB::table('payments')
+                    ->join('users', 'users.id', '=', 'payments.approve_by')
+                    ->where('payments.status', '!=', 'Menunggu Konfirmasi')
+                    ->paginate(20);
+        
+        return view('admin.transaksi', [
+            'tittle' => 'Rekap Transaksi',
+            'footer' => 'yes'
+        ])->with('payment', $payment);
     }
 }
