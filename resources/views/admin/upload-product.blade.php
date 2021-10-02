@@ -32,11 +32,11 @@
                         <td class="fw-bold text-uppercase" style="vertical-align: middle">{{ $produk->nama }}</td>
                         <td style="vertical-align: middle">@currency($produk->harga)</td>
                         <td style="vertical-align: middle; width: 40%">
-                          <div class="row d-flex justify-content-center">
-                            <div class="col-md-2">
+                          <div class="row">
+                            <div class="col-md-6 d-flex justify-content-end">
                               <a class="btn btn-primary text-uppercase" href="/product-admin/update/{{ $produk->id }}" style="width: 100px">Update</a>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-6 d-flex justify-content-start">
                                 <form action="/hapus-produk" method="POST">
                                   @csrf
                                   <input type="hidden" name="id" id="id" value="{{ $produk->id }}">

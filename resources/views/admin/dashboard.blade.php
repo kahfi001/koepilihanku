@@ -72,6 +72,15 @@
                                     <i class="fas fa-fw fa-shipping-fast fa-2x text-gray-300"></i>
                                 </div>
                             </div>
+                            @if ($transaksiBelumdiKonfirmasi > 0)    
+                                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            @else
+                                <span class="d-none position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            @endif
                         </div>
                     </div>
                 </a>
