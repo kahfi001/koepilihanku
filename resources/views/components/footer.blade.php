@@ -4,7 +4,7 @@
           <footer class="row row-cols-5 mt-5 border-top">
             <div class="col-md">
               <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                <img src="/asssets/img/navbar-logo.png" alt="" height="40" />
+                <img src="/asssets/img/navbar-logo.png" alt="" height="100" />
               </a>
               <p class="text-muted">© 2021</p>
             </div>
@@ -72,7 +72,7 @@
                   <i class="fab fa-whatsapp my-2"></i>
                 </div>
                 <div class="col-md-10 d-flex align-items-center">
-                  <h6>081246504639</h6>
+                  <h6>085162614639</h6>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@
                   <i class="fas fa-envelope my-2"></i>
                 </div>
                 <div class="col-md-10 d-flex align-items-center">
-                  <h6>manifestocoffee2@gmail.com</h6>
+                  <h6>Koepilihanku@gmail.com</h6>
                 </div>
               </div>
             </div>

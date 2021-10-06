@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
     {{-- <link href="{{ URL::asset('css/jquery.nice-number.css') }}" rel="stylesheet" /> --}}
 
-    <title>Manifesto Coffee | {{ $tittle }}</title>
+    <title>Koepilihanku | {{ $tittle }}</title>
   </head>
   <body style="margin-top: 65px">
     @include('components.navbar')

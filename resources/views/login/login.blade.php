@@ -24,7 +24,7 @@
                 <form action="/login" method="POST">
                   @csrf
                     <div class="text-center">
-                        <img class="mb-4" src="/asssets/img/logo-hitam.png" alt="" width="72" height="57">
+                        <img class="mb-4" src="/asssets/img/navbar-logo.png" alt=""  height="150">
                     </div>
                   <h1 class="h3 mb-3 fw-normal text-center">Silahkan Login</h1>
               
